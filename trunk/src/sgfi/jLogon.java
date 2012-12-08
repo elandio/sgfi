@@ -15,6 +15,7 @@ import java.awt.Dimension;
 import java.awt.Toolkit;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Locale;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.prefs.Preferences;
@@ -66,7 +67,8 @@ public class jLogon extends javax.swing.JFrame {
             }
         });
 
-        jDesktopPane1.setBorder(new javax.swing.border.MatteBorder(resourceMap.getIcon("jDesktopPane1.border.tileIcon"))); // NOI18N
+        jDesktopPane1.setBorder(javax.swing.BorderFactory.createMatteBorder(200, 200, 200, 200, resourceMap.getIcon("jDesktopPane1.border.tileIcon"))); // NOI18N
+        jDesktopPane1.setToolTipText(resourceMap.getString("jDesktopPane1.toolTipText")); // NOI18N
         jDesktopPane1.setName("jDesktopPane1"); // NOI18N
         jDesktopPane1.setPreferredSize(new java.awt.Dimension(492, 258));
 
@@ -191,7 +193,7 @@ public ClassConecta conexao = new ClassConecta();
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         //frame.setMinimumSize(new Dimension(800, 600));
         frame.setMinimumSize(new Dimension((screenSize.width - 50), (screenSize.height - 100)));
-        //frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
+        frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
         //Quando restaurar nãõ va para o canto direito e sim para o esquerdo.
 //        frame.setLocation(10, 10);
         
@@ -240,20 +242,20 @@ public ClassConecta conexao = new ClassConecta();
         senhajPasswordField.setText("");
 
         //recuperar preferencia
-        Preferences prefs = Preferences.userRoot().node(""); //this.getClass().getName()
+//        Preferences prefs = Preferences.userRoot().node(""); //this.getClass().getName()
 
         //Recuperar parametros
         //Para usar os parâmetros é necessário que não haja preferencias armazendas
-        if ( (SGFIApp.ipMySQL.length() > 0) && ( prefs.get("ipMySQL", "" ).length() == 0 )  ){
-
-          //Definir classe conecta
-          prefs.put("ipMySQL", SGFIApp.ipMySQL );
-          prefs.put("usuarioMySQL", SGFIApp.usuarioBancoMySQL );
-          prefs.put("senhaMySQL", SGFIApp.senhaBancoMySQL );
-          prefs.put("portaMySQL", SGFIApp.portaMySQL );
-          prefs.put("bancoMySQL", SGFIApp.bancoMySQL );
-
-        }
+//        if ( (SGFIApp.ipMySQL.length() > 0) && ( prefs.get("ipMySQL", "" ).length() == 0 )  ){
+//
+//          //Definir classe conecta
+//          prefs.put("ipMySQL", SGFIApp.ipMySQL );
+//          prefs.put("usuarioMySQL", SGFIApp.usuarioBancoMySQL );
+//          prefs.put("senhaMySQL", SGFIApp.senhaBancoMySQL );
+//          prefs.put("portaMySQL", SGFIApp.portaMySQL );
+//          prefs.put("bancoMySQL", SGFIApp.bancoMySQL );
+//
+//        }
     }//GEN-LAST:event_formWindowOpened
 
     /**

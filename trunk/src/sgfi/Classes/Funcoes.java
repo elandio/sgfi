@@ -11,8 +11,10 @@ import java.sql.SQLException;
 import java.text.DecimalFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 import javax.swing.JComboBox;
 import javax.swing.JFormattedTextField;
 import javax.swing.JOptionPane;
@@ -316,7 +318,26 @@ public static int getMonth(String data) throws ParseException{
          }
      }
 
-
+public List quebrarTexto(String texto, String valorQuebra){
+    String caracterSplit = valorQuebra.toString();
+    String text = texto.toString();
+    List<String> s = new ArrayList<String>();
+    String buffer = "";
+    int ts = caracterSplit.length();
+    for(int i = 0; i < text.length(); i++){      
+      if((i + ts <= text.length()) && (text.substring(i, i+ts).equals(caracterSplit))) {
+        s.add(buffer);     
+        buffer = "";    
+        i += ts-1;
+      }
+      else
+        buffer += text.substring(i, i+1);
+    }
+    s.add(buffer);
+    return s;
+    //String[] arrText = text.getString().split(caracterSplit.getString());
+    //return VariantPool.get(Arrays.asList(arrText));
+  }
 
 
 }

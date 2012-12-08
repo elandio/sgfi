@@ -407,7 +407,6 @@ public class LivroCaixa implements Serializable {
 
             }
 
-
         resultSet = stmtQuery.executeQuery();
 
 
