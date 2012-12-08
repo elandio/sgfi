@@ -161,7 +161,7 @@ public class SGFIView extends FrameView {
         mainPanel.setName("mainPanel"); // NOI18N
 
         org.jdesktop.application.ResourceMap resourceMap = org.jdesktop.application.Application.getInstance(sgfi.SGFIApp.class).getContext().getResourceMap(SGFIView.class);
-        jDesktopPane1.setBorder(new javax.swing.border.MatteBorder(resourceMap.getIcon("jDesktopPane1.border.tileIcon"))); // NOI18N
+        jDesktopPane1.setBorder(javax.swing.BorderFactory.createMatteBorder(400, 400, 400, 400, resourceMap.getIcon("jDesktopPane1.border.tileIcon"))); // NOI18N
         jDesktopPane1.setName("jDesktopPane1"); // NOI18N
 
         jButton1.setIcon(resourceMap.getIcon("jButton1.icon")); // NOI18N
@@ -238,7 +238,7 @@ public class SGFIView extends FrameView {
         );
         mainPanelLayout.setVerticalGroup(
             mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jDesktopPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 570, Short.MAX_VALUE)
+            .addComponent(jDesktopPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 620, Short.MAX_VALUE)
         );
 
         menuBar.setName("menuBar"); // NOI18N

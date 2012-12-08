@@ -724,7 +724,7 @@ public class jFCaixa extends javax.swing.JFrame {
         URL arquivo = getClass().getResource("igreja.png");
         setIconImage(java.awt.Toolkit.getDefaultToolkit().getImage(arquivo));
 
-        conexao.conecta();
+        ClassConecta.conecta();
         SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
         Date dataLanc = new Date();
         String datAtual = null;

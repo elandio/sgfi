@@ -93,7 +93,7 @@ public class jFOperacao extends javax.swing.JDialog {
         });
 
         org.jdesktop.application.ResourceMap resourceMap = org.jdesktop.application.Application.getInstance(sgfi.SGFIApp.class).getContext().getResourceMap(jFOperacao.class);
-        origemjPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, resourceMap.getString("origemjPanel.border.title"), javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), resourceMap.getColor("origemjPanel.border.titleColor"))); // NOI18N
+        origemjPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, resourceMap.getString("origemjPanel.border.title"), javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, null, resourceMap.getColor("origemjPanel.border.titleColor"))); // NOI18N
         origemjPanel.setName("origemjPanel"); // NOI18N
 
         jLabel1.setText(resourceMap.getString("jLabel1.text")); // NOI18N
@@ -138,7 +138,7 @@ public class jFOperacao extends javax.swing.JDialog {
 
         origemjPanelLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {atualizarContaOrigjButton, contaOrigemjComboBox});
 
-        painelDestinojPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, resourceMap.getString("painelDestinojPanel.border.title"), javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), resourceMap.getColor("painelDestinojPanel.border.titleColor"))); // NOI18N
+        painelDestinojPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, resourceMap.getString("painelDestinojPanel.border.title"), javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, null, resourceMap.getColor("painelDestinojPanel.border.titleColor"))); // NOI18N
         painelDestinojPanel.setToolTipText(resourceMap.getString("painelDestinojPanel.toolTipText")); // NOI18N
         painelDestinojPanel.setName("painelDestinojPanel"); // NOI18N
         painelDestinojPanel.setPreferredSize(new java.awt.Dimension(417, 243));
@@ -356,7 +356,7 @@ public class jFOperacao extends javax.swing.JDialog {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, resourceMap.getString("jPanel1.border.title"), javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), resourceMap.getColor("jPanel1.border.titleColor"))); // NOI18N
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, resourceMap.getString("jPanel1.border.title"), javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, null, resourceMap.getColor("jPanel1.border.titleColor"))); // NOI18N
         jPanel1.setName("jPanel1"); // NOI18N
 
         comunidadejComboBox.setName("comunidadejComboBox"); // NOI18N
@@ -419,7 +419,7 @@ public class jFOperacao extends javax.swing.JDialog {
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(70, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         pack();
@@ -487,7 +487,7 @@ public class jFOperacao extends javax.swing.JDialog {
                     //Deposito
                     Integer numDoc = 0;
                     operacaoDesc = "Deposito";
-                    Funcoes.setLancContabil(conexao, dataLancjFormattedTextField.getText(), codComunidade.getId(), codConta.getId(), numDoc, codPessoa.getId(), operacaoDesc, historicojTextField.getText(), Double.parseDouble(valorfinaljFormattedTextField.getValue().toString()), (String) tipoDocjComboBox.getSelectedItem());
+                    Funcoes.setLancContabil(conexao, dataLancjFormattedTextField.getText(), codComunidade.getId(), codConta.getId(), numDoc, codPessoa.getId(), operacaoDesc, historicojTextField.getText(), Double.parseDouble(valorfinaljFormattedTextField.getValue().toString()),tipoDocjComboBox.getSelectedItem().toString());
                     break;
 
                     case 1:
